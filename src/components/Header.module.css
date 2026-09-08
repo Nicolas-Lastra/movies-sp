@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+}
+
+.authContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.registerButton {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    
+    &:hover {
+        color: var(--hover);
+    }
+}
+
+.loginButton {
+    background-color: var(--button-muted);
+    color: var(--text-muted);
+    
+    &:hover {
+        background-color: var(--button-hover);
+    }
+}
+
+.registerButton, .loginButton {
+    border-radius: .5rem;
+    padding: .5rem .9rem;
+    text-align: center;
+    transition: .25s;
+    font-family: var(--body-font);
+    font-size: .8rem;
+}

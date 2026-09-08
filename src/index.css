@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ffffff;
+  --primary-dark: #A00F0F;
+  --primary-hover: #e41515;
+  --primary-light: #e41515;
+  --background: #0c0808;
+  --background-light: #573a3a;
+  --button-muted: #1d1d1d;
+  --button-hover: #303030;
+  --text-primary: #ffffff;
+  --text-secondary: #A00F0F;
+  --text-muted: #dddada;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --input-bg: #1e293b;
+  --hsla-example: hsla(210, 100%, 56%, 1);
+  --heading-font: 'Instrument Serif', serif;
+  --body-font: 'Inter'
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary)
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr 7fr 1fr;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
