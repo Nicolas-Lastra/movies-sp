@@ -20,7 +20,7 @@ export default function Footer() {
 
             <div className={styles.contact}>
                 {/* WhatsApp */}
-                <Link to='https://wa.me'>
+                <Link to='https://wa.me' target='_blank' className={styles.icon}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -38,7 +38,7 @@ export default function Footer() {
                 </Link>
 
                 {/* Mail */}
-                <Link to='mailto:someone@example.com'>
+                <Link to='mailto:someone@example.com' target='_blank' className={styles.icon}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

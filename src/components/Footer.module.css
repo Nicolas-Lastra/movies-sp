@@ -37,3 +37,13 @@
     gap: 1rem;
     justify-content: end;
 }
+
+.icon {
+    color: var(--primary-dark);
+    transition: 250ms;
+
+    &:hover {
+        color: var(--primary-light);
+        transform: translateY(-2px);
+    }
+}
