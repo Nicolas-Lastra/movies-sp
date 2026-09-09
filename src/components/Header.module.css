@@ -3,7 +3,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 1rem;
+    padding: 1rem 1rem;
+    position: fixed;
+    width: 100%;
+
+    background-color: var(--background-transparent);
+}
+
+.brand {
+    border-bottom: 2px solid var(--primary-light);
 }
 
 .authContainer {

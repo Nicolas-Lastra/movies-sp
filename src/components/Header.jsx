@@ -6,7 +6,7 @@ export default function Header() {
     
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.brand}>
                 <Link to={'/'}>
                     <Brand />
                 </Link>
