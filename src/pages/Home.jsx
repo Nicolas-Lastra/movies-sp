@@ -6,7 +6,7 @@ export default function Home() {
         <>
             <section className={styles.hero}>
                 <h1 className={styles.heroTitle}>
-                    The fastest way to <em>search</em> for a movie
+                    The fastest way to <em>search</em> and <em>post</em> movies
                 </h1>
             </section>
         </>

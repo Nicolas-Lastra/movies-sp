@@ -1,10 +1,10 @@
 .hero {
-    padding: 3.5rem 1rem 2.5rem 1rem;
+    padding: 66px 1rem 2.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    min-height: 100dvh;
     background: linear-gradient(to bottom, var(--background-light), var(--background));
 }
 
@@ -12,6 +12,7 @@
     font-family: var(--heading-font);
     font-weight: 200;
     font-size: 3.3rem;
+    text-align: center;
 
     em {
         font-style: normal;
