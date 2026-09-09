@@ -1,0 +1,39 @@
+.footer {
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    
+    color: var(--text-muted);
+    background-color: var(--background-gray);
+    border-top: 1px solid var(--border);
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+@media(width <= 546px) {
+    .copy {
+        display: block;
+    }
+
+    .copySeparator {
+        display: none;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: end;
+}
