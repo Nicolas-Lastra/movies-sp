@@ -10,6 +10,8 @@
   --primary-hover: #e41515;
   --primary-light: #e41515;
   --background: #0c0808;
+  --background-transparent: #0c080896;
+  --background-gray: #181818;
   --background-light: #573a3a;
   --button-muted: #1d1d1d;
   --button-hover: #303030;
@@ -22,20 +24,20 @@
   --input-bg: #1e293b;
   --hsla-example: hsla(210, 100%, 56%, 1);
   --heading-font: 'Instrument Serif', serif;
-  --body-font: 'Inter'
+  --body-font: 'Inter';
 }
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--text-primary)
+  color: var(--text-primary);
+  background-color: var(--background);
 }
 
 #root {
   width: 100%;
   min-height: 100svh;
   display: grid;
-  grid-template-rows: 1fr 7fr 1fr;
+  grid-template-rows: 66px 1fr 66px;
 }
 
 a {
