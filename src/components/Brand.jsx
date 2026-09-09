@@ -5,10 +5,8 @@ export default function Brand() {
 
     return (
         <div className={styles.brand}>
-            <div className={styles.logo}>
-                <span className={styles.logoMark}><Clapperboard size={24} strokeWidth={1.5}/></span>
-                <span className={styles.logoWord}>Movie<em>Search</em></span>
-            </div>
+            <span className={styles.logoMark}><Clapperboard size={24} strokeWidth={1.5}/></span>
+            <span className={styles.logoWord}>Movie<em>SP</em></span>
         </div>
     )
 }
