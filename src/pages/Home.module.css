@@ -6,6 +6,9 @@
     align-items: center;
     min-height: 100dvh;
     background: linear-gradient(to bottom, var(--background-light), var(--background));
+
+    position: relative;
+    overflow: hidden;
 }
 
 .heroTitle {
@@ -14,8 +17,84 @@
     font-size: 3.3rem;
     text-align: center;
 
+    /* Carousel */
+    position: relative;
+    z-index: 1;
+
     em {
         font-style: normal;
         color: var(--primary-light);
     }
+}
+
+.heroCarousel {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.carouselTrack {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    
+    height: 75dvh;
+    background-color: black;
+    border-top: 26px solid black;
+    border-bottom: 26px solid black;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carouselTrack::before,
+.carouselTrack::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+
+    left: 0;
+    width: 100%;
+    height: 14px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            black 0px 6px,
+            var(--background-light) 6px 16px,
+            black 16px 22px
+        );
+}
+
+.carouselTrack::before {
+    top: -20px;
+}
+
+.carouselTrack::after {
+    bottom: -20px;
+}
+
+.carouselGroup {
+    display: flex;
+    flex-shrink: 0;
+
+    /* El padding-right debe coincidir con el gap.
+    Esto hace que ambos grupos tengan exactamente
+    la misma separación también en la unión. */
+    gap: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.carouselImage {
+    display: block;
+    flex-shrink: 0;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
