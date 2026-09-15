@@ -1,11 +1,9 @@
 .hero {
-    padding: 66px 1rem 2.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100dvh;
-    background: linear-gradient(to bottom, var(--background-light), var(--background));
+    min-height: calc(100dvh - 66px);
 
     position: relative;
     overflow: hidden;
@@ -39,6 +37,7 @@
     z-index: 0;
 }
 
+/* Film border effect */
 .carouselTrack {
     display: flex;
     width: max-content;
