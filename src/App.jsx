@@ -16,8 +16,8 @@ export default function App() {
           <Route path = '/login' element={<Login />}/>
           <Route path = '*' element={<NotFound />}/>
         </Routes>
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }
