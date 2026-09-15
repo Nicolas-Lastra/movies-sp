@@ -25,9 +25,11 @@ html, body {
   --button-muted: #1d1d1d;
   --button-hover: #303030;
   --text-primary: #ffffff;
+  --text-contrast: #000000;
   --text-secondary: #A00F0F;
   --text-muted: #dddada;
   --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgb(138, 120, 120);
   --card-bg: #1e293b;
   --shadow: rgba(0, 0, 0, 0.3);
   --input-bg: #1e293b;
@@ -52,4 +54,29 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.main-general {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button, input {
+  all: unset;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
 }
