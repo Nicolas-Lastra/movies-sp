@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import styles from './Home.module.css'
@@ -14,9 +13,7 @@ const movieImages = [
     'https://posters.movieposterdb.com/14_09/2014/816692/l_816692_593eaeff.jpg'
 ]
 
-export default function Home() {
-    const heroRef = useRef(null)
-
+export default function Home({ ref }) {
     useGSAP(() => {
         if(movieImages.length === 0) return
 
@@ -26,45 +23,43 @@ export default function Home() {
             ease: 'none',
             repeat: -1
         })
-    }, { scope: heroRef })
+    }, { scope: ref })
 
     return (
-        <>
-            <section className={styles.hero} ref={heroRef}>
-                {movieImages.length > 0 && (
-                    <div className={styles.heroCarousel} aria-hidden='true'>
-                        <div className={styles.carouselTrack}>
-                            <div className={styles.carouselGroup}>
-                                {movieImages.map((image, index) => (
-                                    <img
-                                        key={`first-${index}`}
-                                        src={image}
-                                        alt=''
-                                        className={styles.carouselImage}
-                                        draggable='false'
-                                    />
-                                ))}
-                            </div>
+        <section className={styles.hero} ref={ref}>
+            {movieImages.length > 0 && (
+                <div className={styles.heroCarousel} aria-hidden='true'>
+                    <div className={styles.carouselTrack}>
+                        <div className={styles.carouselGroup}>
+                            {movieImages.map((image, index) => (
+                                <img
+                                    key={`first-${index}`}
+                                    src={image}
+                                    alt=''
+                                    className={styles.carouselImage}
+                                    draggable='false'
+                                />
+                            ))}
+                        </div>
 
-                            <div className={styles.carouselGroup}>
-                                {movieImages.map((image, index) => (
-                                    <img
-                                        key={`second-${index}`}
-                                        src={image}
-                                        alt=''
-                                        className={styles.carouselImage}
-                                        draggable='false'
-                                    />
-                                ))}
-                            </div>
+                        <div className={styles.carouselGroup}>
+                            {movieImages.map((image, index) => (
+                                <img
+                                    key={`second-${index}`}
+                                    src={image}
+                                    alt=''
+                                    className={styles.carouselImage}
+                                    draggable='false'
+                                />
+                            ))}
                         </div>
                     </div>
-                )}
+                </div>
+            )}
 
-                <h1 className={styles.heroTitle}>
-                    The fastest way to <em>search</em> and <em>post</em> movies
-                </h1>
-            </section>
-        </>
+            <h1 className={styles.heroTitle}>
+                The fastest way to <em>search</em> and <em>post</em> movies
+            </h1>
+        </section>
     )
 }
