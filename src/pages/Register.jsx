@@ -1,7 +1,7 @@
-export default function Register() {
+export default function Register({ ref }) {
 
     return(
-        <>
+        <section ref={ref} className='auth-page'>
             <div className='card'>
                 <form action="" className='form'>
                     <h1>Register</h1>
@@ -14,6 +14,6 @@ export default function Register() {
                     <button>Register</button>
                 </form>
             </div>
-        </>
+        </section>
     )
 }
