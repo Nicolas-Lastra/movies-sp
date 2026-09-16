@@ -1,7 +1,7 @@
-export default function Profile() {
+export default function Profile({ ref }) {
 
     return (
-        <>
-        </>
+        <section ref={ref}>
+        </section>
     )
 }
