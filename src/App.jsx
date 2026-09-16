@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import NotFound from './pages/NotFound'
 import Register from './pages/Register'
+import TransitionComponent from './components/Transition'
 import { useLocation } from 'react-router'
 
 export default function App() {
@@ -16,10 +17,26 @@ export default function App() {
       <Header />
       <main className={mainClass}>
         <Routes>
-          <Route path = '/' element={<Home />}/>
-          <Route path = '/login' element={<Login />}/>
-          <Route path = '/register' element={<Register />}/>
-          <Route path = '*' element={<NotFound />}/>
+          <Route path = '/' element={
+            <TransitionComponent>
+              <Home />
+            </TransitionComponent>
+          }/>
+          <Route path = '/login' element={
+            <TransitionComponent>
+              <Login />
+            </TransitionComponent>
+          }/>
+          <Route path = '/register' element={
+            <TransitionComponent>
+              <Register />
+            </TransitionComponent>
+          }/>
+          <Route path = '*' element={
+            <TransitionComponent>
+              <NotFound />
+            </TransitionComponent>
+          }/>
         </Routes>
       </main>
       <Footer />
