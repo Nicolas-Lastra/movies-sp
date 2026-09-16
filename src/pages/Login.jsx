@@ -1,11 +1,11 @@
 import styles from './Login.module.css'
 import { Link } from 'react-router'
 
-export default function Login() {
+export default function Login({ ref }) {
     
     return (
-        <>
-            <div className='card'>
+        <section ref={ref} className='auth-page'>
+            <div className='card' >
                 <form action="" className='form'>
                     <h1>Login</h1>
                     <label htmlFor="username">Username</label>
@@ -23,6 +23,6 @@ export default function Login() {
                     </div>
                 </form>
             </div>
-        </>
+        </section>
     )
 }
