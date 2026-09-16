@@ -5,8 +5,8 @@ export default function Login() {
     
     return (
         <>
-            <div className={styles.card}>
-                <form action="" className={styles.loginForm}>
+            <div className='card'>
+                <form action="" className='form'>
                     <h1>Login</h1>
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" placeholder=""/>
